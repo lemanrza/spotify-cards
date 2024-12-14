@@ -1,0 +1,138 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #10A351;
+  padding: 20px;
+}
+header .logo {
+  width: 10rem;
+  height: 3rem;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header input {
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+header .contact ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .contact ul li {
+  font-size: 25px;
+}
+header .contact ul li a {
+  color: #005C0A;
+}
+header .menu {
+  display: none;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid white;
+}
+@media (max-width: 991px) {
+  header .contact {
+    display: none;
+  }
+  header input {
+    display: none;
+  }
+  header .menu {
+    display: block;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+main h2 {
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #026912;
+}
+main .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 500px 500px;
+  padding: 2rem 10%;
+  gap: 1.2rem;
+}
+main .container .card {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .container .card .image {
+  height: 40%;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.6s;
+}
+main .container .card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .card .name {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+main .container .card .name h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: 7px;
+}
+main .container .card .name p {
+  color: #a2a8ac;
+}
+main .container .card .player {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 4s linear;
+}
+main .container .card .player img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .card:hover .image {
+  transform: scale(1.2);
+}
+main .container .card:hover .player {
+  transform: rotate(360deg);
+}
+@media (max-width: 991px) {
+  main .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  main .container {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */
